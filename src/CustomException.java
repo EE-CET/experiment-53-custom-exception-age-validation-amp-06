@@ -5,11 +5,26 @@ import java.util.Scanner;
 
 public class CustomException {
     
-    // TODO: Create a static method validate(int age) that throws InvalidAgeException
-    // Check if age < 18, throw new InvalidAgeException("Not eligible to vote")
-    // Else print "Eligible to vote"
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
 
-    
-        // TODO: Read age
+        try
+        {
+            if(age < 18)
+            {
+                throw new Exception("Not eligible to vote");
+            }
+            else
+            {
+                System.out.println("Eligible to vote");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
         
 }
